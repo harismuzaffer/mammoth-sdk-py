@@ -13,6 +13,9 @@ targets:
     mammoth-analytics:
         target: python
         source: Mammoth Analytics
+        publish:
+            pypi:
+                token: $pypi_token
         codeSamples:
             registry:
                 location: registry.speakeasyapi.dev/mammoth-analytics/litestar/mammoth-analytics-python-code-samples
