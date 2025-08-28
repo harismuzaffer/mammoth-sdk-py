@@ -1,0 +1,12 @@
+# TaskDetailsSchema
+
+
+## Fields
+
+| Field                                                           | Type                                                            | Required                                                        | Description                                                     | Example                                                         |
+| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
+| `ds_ids`                                                        | List[*int*]                                                     | :heavy_minus_sign:                                              | Datasource ID                                                   | {<br/>"summary": "Sample Datasource ID",<br/>"value": [<br/>1<br/>]<br/>} |
+| `id`                                                            | *OptionalNullable[int]*                                         | :heavy_minus_sign:                                              | Destination Dataset ID                                          | {<br/>"summary": "Sample Destination Dataset ID",<br/>"value": 1<br/>} |
+| `destination_dataset_ids`                                       | List[*int*]                                                     | :heavy_minus_sign:                                              | Destination dataset ids                                         | {<br/>"summary": "Sample Destination dataset ids",<br/>"value": [<br/>1<br/>]<br/>} |
+| `source_folder_resource_id`                                     | *OptionalNullable[int]*                                         | :heavy_minus_sign:                                              | Source Folder Resource ID                                       | {<br/>"summary": "Sample Source Folder ID",<br/>"value": 1<br/>} |
+| `source_dataset_id`                                             | *OptionalNullable[int]*                                         | :heavy_minus_sign:                                              | Source Dataset ID                                               | {<br/>"summary": "Sample Source Dataset ID",<br/>"value": 1<br/>} |

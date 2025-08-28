@@ -1,0 +1,10 @@
+# PreferencesPatchOp
+
+
+## Fields
+
+| Field                                                                  | Type                                                                   | Required                                                               | Description                                                            | Example                                                                |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| `op`                                                                   | [models.PreferencesPatchOpOp](../models/preferencespatchopop.md)       | :heavy_check_mark:                                                     | Operation                                                              | {<br/>"value": "replace"<br/>}                                         |
+| `path`                                                                 | [models.PreferencesPatchOpPath](../models/preferencespatchoppath.md)   | :heavy_check_mark:                                                     | Path                                                                   | {<br/>"value": "global.self_serve"<br/>}                               |
+| `value`                                                                | [models.PreferencesPatchOpValue](../models/preferencespatchopvalue.md) | :heavy_check_mark:                                                     | N/A                                                                    |                                                                        |

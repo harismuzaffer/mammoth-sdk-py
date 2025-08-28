@@ -1,0 +1,1807 @@
+overlay: 1.0.0
+x-speakeasy-jsonpath: rfc9535
+info:
+  title: Speakeasy Modifications
+  version: 0.0.2
+  x-speakeasy-metadata:
+    after: ""
+    before: ""
+    type: speakeasy-modifications
+actions:
+  - target: $["paths"]["/workspaces/{workspace_id}/subscription/billing-history"]["get"]
+    update:
+      x-speakeasy-group: stripeSubscriptions
+      x-speakeasy-name-override: getBillingHistory
+    x-speakeasy-metadata:
+      after: sdk.stripeSubscriptions.getBillingHistory()
+      before: sdk.Stripe Subscriptions.GetWorkspaceBillingHistory()
+      created_at: 1756404769158
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/support/workspaces/{workspace_id}/users"]["post"]
+    update:
+      x-speakeasy-group: usersSupport
+      x-speakeasy-name-override: addToWorkspace
+    x-speakeasy-metadata:
+      after: sdk.usersSupport.addToWorkspace()
+      before: sdk.Users Support.AddUserToWorkspace()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/connectors/{connector_key}/connections/{connection_key}/ds_configs/{ds_config_key}"]["delete"]
+    update:
+      x-speakeasy-group: dsConfigs
+      x-speakeasy-name-override: remove
+    x-speakeasy-metadata:
+      after: sdk.dsConfigs.remove()
+      before: sdk.DsConfig.DeleteDsConfig()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/subscription/plans"]["post"]
+    update:
+      x-speakeasy-group: subscriptionPlans
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.subscriptionPlans.create()
+      before: sdk.Subscription Plans.CreatePlan()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/subscription/connector-profiles"]["get"]
+    update:
+      x-speakeasy-group: connectorProfiles
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.connectorProfiles.list()
+      before: sdk.Connector Profiles.ListConnectorProfiles()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/connectors/{connector_key}/connections"]["get"]
+    update:
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.connections.list()
+      before: sdk.Connections.ListConnections()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/folders"]["patch"]
+    update:
+      x-speakeasy-name-override: updateResources
+    x-speakeasy-metadata:
+      after: sdk.folders.updateResources()
+      before: sdk.Folders.UpdateFolderResources()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/support/workspaces/{workspace_id}/sms"]["post"]
+    update:
+      x-speakeasy-group: subscriptionsSupport
+      x-speakeasy-name-override: register
+    x-speakeasy-metadata:
+      after: sdk.subscriptionsSupport.register()
+      before: sdk.Subscriptions Support.RegisterSubscription()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/browse"]["get"]
+    update:
+      x-speakeasy-name-override: getProject
+    x-speakeasy-metadata:
+      after: sdk.browse.getProject()
+      before: sdk.Browse.BrowseProjectProjects()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/users"]["delete"]
+    update:
+      x-speakeasy-name-override: removeMember
+    x-speakeasy-metadata:
+      after: sdk.workspaces.removeMember()
+      before: sdk.Workspaces.RemoveUserFromWorkspace()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/folders"]["get"]
+    update:
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.folders.list()
+      before: sdk.Folders.ListFolders()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}"]["patch"]
+    update:
+      x-speakeasy-name-override: rename
+    x-speakeasy-metadata:
+      after: sdk.projects.rename()
+      before: sdk.Projects.UpdateProject()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/subscription/status"]["get"]
+    update:
+      x-speakeasy-group: stripeSubscriptions
+      x-speakeasy-name-override: getWorkspaceStatus
+    x-speakeasy-metadata:
+      after: sdk.stripeSubscriptions.getWorkspaceStatus()
+      before: sdk.Stripe Subscriptions.GetWorkspaceSubscriptionStatus()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/support/workspaces"]["get"]
+    update:
+      x-speakeasy-group: workspacesSupport
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.workspacesSupport.list()
+      before: sdk.Workspaces Support.ListWorkspaces()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/subscription"]["get"]
+    update:
+      x-speakeasy-group: stripeSubscriptions
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.stripeSubscriptions.get()
+      before: sdk.Stripe Subscriptions.GetWorkspaceSubscription()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/connectors/{connector_key}"]["get"]
+    update:
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.connectors.get()
+      before: sdk.Connectors.GetConnector()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}/dataviews/{dataview_id}/pipeline"]["patch"]
+    update:
+      x-speakeasy-group: dataviewPipeline
+      x-speakeasy-name-override: edit
+    x-speakeasy-metadata:
+      after: sdk.dataviewPipeline.edit()
+      before: sdk.Dataview pipeline.EditPipeline()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}/dataviews/{dataview_id}/pipeline/exports/{export_id}"]["patch"]
+    update:
+      x-speakeasy-group: dataviewPipelineExports
+      x-speakeasy-name-override: edit
+    x-speakeasy-metadata:
+      after: sdk.dataviewPipelineExports.edit()
+      before: sdk.Dataview pipeline Export.EditExport()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/subscription/customer-portal"]["post"]
+    update:
+      x-speakeasy-group: stripeSubscriptions
+      x-speakeasy-name-override: createPortalUrl
+    x-speakeasy-metadata:
+      after: sdk.stripeSubscriptions.createPortalUrl()
+      before: sdk.Stripe Subscriptions.CreateCustomerPortalUrl()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}/dataviews/{dataview_id}/pipeline/exports/{export_id}"]["delete"]
+    update:
+      x-speakeasy-group: dataviewPipelineExport
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.dataviewPipelineExport.delete()
+      before: sdk.Dataview pipeline Export.DeleteExport()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/files"]["post"]
+    update:
+      x-speakeasy-name-override: createDataset
+    x-speakeasy-metadata:
+      after: sdk.files.createDataset()
+      before: sdk.Files.CreateFileDataset()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/schedules"]["get"]
+    update:
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.schedules.list()
+      before: sdk.Schedules.ListSchedules()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/connectors"]["get"]
+    update:
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.connectors.list()
+      before: sdk.Connectors.ListWorkspaceConnectors()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/subscription/check/check-connector"]["post"]
+    update:
+      x-speakeasy-group: subscriptionAccessControl
+      x-speakeasy-name-override: checkConnector
+    x-speakeasy-metadata:
+      after: sdk.subscriptionAccessControl.checkConnector()
+      before: sdk.Subscription Access Control.CheckConnectorAccess()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/connectors/{connector_key}/connections/{connection_key}/ds_configs"]["post"]
+    update:
+      x-speakeasy-group: dsConfigs
+      x-speakeasy-name-override: validateAndFetchData
+    x-speakeasy-metadata:
+      after: sdk.dsConfigs.validateAndFetchData()
+      before: sdk.DsConfig.ValidateAndGetDsConfig()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/webhooks/{webhook_id}"]["get"]
+    update:
+      x-speakeasy-name-override: getDetails
+    x-speakeasy-metadata:
+      after: sdk.webhooks.getDetails()
+      before: sdk.Webhooks.GetWebhookDetails()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/external_keys"]["post"]
+    update:
+      x-speakeasy-group: externalKeys
+      x-speakeasy-name-override: add
+    x-speakeasy-metadata:
+      after: sdk.externalKeys.add()
+      before: sdk.External keys.AddExternalKey()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/jobs/{job_id}"]["get"]
+    update:
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.jobs.get()
+      before: sdk.Jobs.GetJob()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/subscription/features"]["get"]
+    update:
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.features.list()
+      before: sdk.Features.ListFeatures()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/reports"]["get"]
+    update:
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.reports.list()
+      before: sdk.Reports.GetReports()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/subscription/connector-profiles"]["post"]
+    update:
+      x-speakeasy-group: connectorProfiles
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.connectorProfiles.create()
+      before: sdk.Connector Profiles.CreateConnectorProfile()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/connectors/{connector_key}/connections/{connection_key}/ds_configs/{ds_config_key}"]["patch"]
+    update:
+      x-speakeasy-group: dsConfigs
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.dsConfigs.update()
+      before: sdk.DsConfig.UpdateDsConfigs()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/subscription_v1/invoices"]["get"]
+    update:
+      x-speakeasy-group: subscriptions
+    x-speakeasy-metadata:
+      after: sdk.subscriptions.listInvoices()
+      before: sdk.Subscription.ListInvoices()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}"]["get"]
+    update:
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.datasets.get()
+      before: sdk.Datasets.GetDataset()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/gdpr_hooks/shopify/customers/redact"]["post"]
+    update:
+      x-speakeasy-group: shopifyPrivacyWebhooks
+      x-speakeasy-name-override: redactCustomer
+    x-speakeasy-metadata:
+      after: sdk.shopifyPrivacyWebhooks.redactCustomer()
+      before: sdk.Shopify Privacy Webhooks.ShopifyCustomerRedact()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/users"]["patch"]
+    update:
+      x-speakeasy-name-override: updateUser
+    x-speakeasy-metadata:
+      after: sdk.projects.updateUser()
+      before: sdk.Projects.UpdateUserProject()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/support/users"]["post"]
+    update:
+      x-speakeasy-group: registrationSupport
+      x-speakeasy-name-override: register
+    x-speakeasy-metadata:
+      after: sdk.registrationSupport.register()
+      before: sdk.Registration Support.RegisterUser()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}"]["patch"]
+    update:
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.datasets.update()
+      before: sdk.Datasets.UpdateDataset()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}/dataviews"]["post"]
+    update:
+      x-speakeasy-name-override: add
+    x-speakeasy-metadata:
+      after: sdk.dataviews.add()
+      before: sdk.Dataviews.AddDataview()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}/dataviews/{dataview_id}/pipeline/exports"]["get"]
+    update:
+      x-speakeasy-group: dataviewPipelineExports
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.dataviewPipelineExports.list()
+      before: sdk.Dataview pipeline Exports.GetPipelineExports()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects"]["get"]
+    update:
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.projects.list()
+      before: sdk.Projects.GetProject()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/users"]["post"]
+    update:
+      x-speakeasy-name-override: addUser
+    x-speakeasy-metadata:
+      after: sdk.workspaces.addUser()
+      before: sdk.Workspaces.AddUserInWorkspace()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets"]["get"]
+    update:
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.datasets.list()
+      before: sdk.Datasets.GetDatasets()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/subscription/usage"]["get"]
+    update:
+      x-speakeasy-group: stripeSubscriptions
+      x-speakeasy-name-override: getUsage
+    x-speakeasy-metadata:
+      after: sdk.stripeSubscriptions.getUsage()
+      before: sdk.Stripe Subscriptions.GetWorkspaceUsage()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/files"]["get"]
+    update:
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.files.list()
+      before: sdk.Files.ListFiles()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/subscription/feature-profiles/{profile_id}/features"]["post"]
+    update:
+      x-speakeasy-group: featureProfiles
+      x-speakeasy-name-override: addFeature
+    x-speakeasy-metadata:
+      after: sdk.featureProfiles.addFeature()
+      before: sdk.Feature Profiles.AddFeatureToProfile()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/subscription/features/{feature_id}"]["put"]
+    update:
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.features.update()
+      before: sdk.Features.UpdateFeature()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets"]["delete"]
+    update:
+      x-speakeasy-name-override: remove
+    x-speakeasy-metadata:
+      after: sdk.datasets.remove()
+      before: sdk.Datasets.DeleteDatasets()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/subscription/connector-profiles/{profile_id}"]["put"]
+    update:
+      x-speakeasy-group: connectorProfiles
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.connectorProfiles.update()
+      before: sdk.Connector Profiles.UpdateConnectorProfile()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/subscription/create-checkout"]["post"]
+    update:
+      x-speakeasy-group: stripeSubscriptions
+    x-speakeasy-metadata:
+      after: sdk.stripeSubscriptions.createCheckoutUrl()
+      before: sdk.Stripe Subscriptions.CreateCheckoutUrl()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}/batches/{batch_id}"]["delete"]
+    update:
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.batches.delete()
+      before: sdk.Batches.DeleteBatch()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}/dataviews/{dataview_id}/pipeline/tasks/{task_id}"]["get"]
+    update:
+      x-speakeasy-group: dataviewPipelineTasks
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.dataviewPipelineTasks.get()
+      before: sdk.Dataview pipeline Task.GetPipelineTask()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/files/{file_id}"]["patch"]
+    update:
+      x-speakeasy-name-override: updateConfigs
+    x-speakeasy-metadata:
+      after: sdk.files.updateConfigs()
+      before: sdk.Files.UpdateFileConfigs()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}/dataviews/{dataview_id}/pipeline/exports"]["post"]
+    update:
+      x-speakeasy-group: dataviewPipelineExports
+      x-speakeasy-name-override: add
+    x-speakeasy-metadata:
+      after: sdk.dataviewPipelineExports.add()
+      before: sdk.Dataview pipeline Exports.AddExport()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}/batches"]["get"]
+    update:
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.batches.list()
+      before: sdk.Batches.GetBatches()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/support/users"]["patch"]
+    update:
+      x-speakeasy-group: registrationSupport
+    x-speakeasy-metadata:
+      after: sdk.registrationSupport.updateUserVerification()
+      before: sdk.Registration Support.UpdateUserVerification()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/folders/{folder_id}"]["get"]
+    update:
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.folders.get()
+      before: sdk.Folders.GetFolder()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/schedules/{schedule_id}"]["patch"]
+    update:
+      x-speakeasy-name-override: patch
+    x-speakeasy-metadata:
+      after: sdk.schedules.patch()
+      before: sdk.Schedules.PatchSchedule()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/support/sms"]["get"]
+    update:
+      x-speakeasy-group: subscriptionsSupport
+    x-speakeasy-metadata:
+      after: sdk.subscriptionsSupport.getPlans()
+      before: sdk.Subscriptions Support.GetPlans()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/webhooks/{webhook_id}"]["patch"]
+    update:
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.webhooks.update()
+      before: sdk.Webhooks.UpdateWebhookConfigurations()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/automations"]["get"]
+    update:
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.automations.list()
+      before: sdk.Automations.GetList()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/subscription/feature-profiles"]["post"]
+    update:
+      x-speakeasy-group: featureProfiles
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.featureProfiles.create()
+      before: sdk.Feature Profiles.CreateFeatureProfile()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/subscription/feature-profiles/{profile_id}"]["delete"]
+    update:
+      x-speakeasy-group: featureProfiles
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.featureProfiles.delete()
+      before: sdk.Feature Profiles.DeleteFeatureProfile()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}"]["delete"]
+    update:
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.datasets.delete()
+      before: sdk.Datasets.DeleteDataset()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/webhooks/{webhook_id}"]["delete"]
+    update:
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.webhooks.delete()
+      before: sdk.Webhooks.DeleteWebhook()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}/data"]["get"]
+    update:
+      x-speakeasy-name-override: getData
+    x-speakeasy-metadata:
+      after: sdk.datasets.getData()
+      before: sdk.Datasets.GetDatasetData()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}/batches"]["patch"]
+    update:
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.batches.update()
+      before: sdk.Batches.UpdateBatches()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}/dataviews/{dataview_id}/pipeline"]["get"]
+    update:
+      x-speakeasy-group: dataviewPipeline
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.dataviewPipeline.get()
+      before: sdk.Dataview pipeline.GetPipeline()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects"]["patch"]
+    update:
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.projects.update()
+      before: sdk.Projects.UpdateProjects()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces"]["post"]
+    update:
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.workspaces.create()
+      before: sdk.Workspaces.CreateWorkspace()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}/dataviews/{dataview_id}/conditional-format"]["post"]
+    update:
+      x-speakeasy-group: conditionalFormats
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.conditionalFormats.create()
+      before: sdk.Conditional Format.CreateConditionalFormat()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/folders/{folder_id}"]["patch"]
+    update:
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.folders.update()
+      before: sdk.Folders.UpdateFolderDetails()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/external_keys/{key_id}"]["get"]
+    update:
+      x-speakeasy-group: externalKey
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.externalKey.get()
+      before: sdk.External key.GetExternalKey()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/folders/{folder_id}"]["delete"]
+    update:
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.folders.delete()
+      before: sdk.Folders.DeleteFolder()
+      created_at: 1756404769159
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}/dataviews/{dataview_id}/pipeline/exports/{export_id}"]["get"]
+    update:
+      x-speakeasy-group: dataviewPipelineExports
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.dataviewPipelineExports.get()
+      before: sdk.Dataview pipeline Export.GetPipelineExport()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/subscription/connector-profiles/{profile_id}"]["delete"]
+    update:
+      x-speakeasy-group: connectorProfiles
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.connectorProfiles.delete()
+      before: sdk.Connector Profiles.DeleteConnectorProfile()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/self"]["delete"]
+    update:
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.self.delete()
+      before: sdk.Self.DeleteSelf()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/webhooks/data/{webhook_uri}"]["get"]
+    update:
+      x-speakeasy-name-override: addDataUsingGet
+    x-speakeasy-metadata:
+      after: sdk.webhooks.addDataUsingGet()
+      before: sdk.Webhooks.AddDataToWebhookUsingGetMethod()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/clientapps/{client_key}"]["delete"]
+    update:
+      x-speakeasy-group: clientApps
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.clientApps.delete()
+      before: sdk.Client Apps.DeleteApp()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/connectors/{connector_key}/connections/{connection_key}/chat"]["post"]
+    update:
+      x-speakeasy-name-override: getSuggestion
+    x-speakeasy-metadata:
+      after: sdk.queryGen.getSuggestion()
+      before: sdk.QueryGen.GetQuerySuggestion()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/webhooks/data/{webhook_uri}"]["post"]
+    update:
+      x-speakeasy-name-override: addData
+    x-speakeasy-metadata:
+      after: sdk.webhooks.addData()
+      before: sdk.Webhooks.AddDataToWebhook()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}"]["get"]
+    update:
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.workspaces.get()
+      before: sdk.Workspaces.GetWorkspace()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/users"]["patch"]
+    update:
+      x-speakeasy-name-override: modifyMember
+    x-speakeasy-metadata:
+      after: sdk.workspaces.modifyMember()
+      before: sdk.Workspaces.UpdateUserToWorkspace()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/subscription/plans/{plan_id}"]["get"]
+    update:
+      x-speakeasy-group: subscriptionPlans
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.subscriptionPlans.get()
+      before: sdk.Subscription Plans.GetPlan()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}/dataviews/{dataview_id}/pipeline/items"]["get"]
+    update:
+      x-speakeasy-group: pipelineItems
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.pipelineItems.get()
+      before: sdk.Dataview pipeline Items.GetPipelineItems()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/users"]["delete"]
+    update:
+      x-speakeasy-name-override: removeUser
+    x-speakeasy-metadata:
+      after: sdk.projects.removeUser()
+      before: sdk.Projects.RemoveUserProject()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/preferences"]["get"]
+    update:
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.preferences.get()
+      before: sdk.Preferences.GetUserPreferences()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/connectors/{connector_key}/connections"]["post"]
+    update:
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.connections.create()
+      before: sdk.Connections.SaveConnection()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/subscription/connectors/{connector_id}"]["put"]
+    update:
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.connectors.update()
+      before: sdk.Connectors.UpdateConnector()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/clientapps/{client_key}"]["patch"]
+    update:
+      x-speakeasy-group: clientApps
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.clientApps.update()
+      before: sdk.Client Apps.UpdateApp()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}/dataviews"]["get"]
+    update:
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.dataviews.list()
+      before: sdk.Dataviews.ListDataviews()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/folders"]["delete"]
+    update:
+      x-speakeasy-name-override: remove
+    x-speakeasy-metadata:
+      after: sdk.folders.remove()
+      before: sdk.Folders.DeleteFolders()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/schedules/{schedule_id}"]["delete"]
+    update:
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.schedules.delete()
+      before: sdk.Schedules.DeleteSchedule()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/support/workspaces/{workspace_id}/sms"]["patch"]
+    update:
+      x-speakeasy-group: subscriptionsSupport
+    x-speakeasy-metadata:
+      after: sdk.subscriptionsSupport.updateSubscription()
+      before: sdk.Subscriptions Support.UpdateSubscription()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}"]["patch"]
+    update:
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.workspaces.update()
+      before: sdk.Workspaces.UpdateWorkspace()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/subscription/plans/{plan_id}"]["delete"]
+    update:
+      x-speakeasy-group: subscriptionPlans
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.subscriptionPlans.delete()
+      before: sdk.Subscription Plans.DeletePlan()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/subscription/plans/{plan_id}"]["put"]
+    update:
+      x-speakeasy-group: subscriptionPlans
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.subscriptionPlans.update()
+      before: sdk.Subscription Plans.UpdatePlan()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets"]["post"]
+    update:
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.datasets.create()
+      before: sdk.Datasets.CreateDatasets()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/schedules"]["post"]
+    update:
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.schedules.create()
+      before: sdk.Schedules.CreateSchedule()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/accept-invite"]["post"]
+    update:
+      x-speakeasy-group: acceptInvite
+      x-speakeasy-name-override: accept
+    x-speakeasy-metadata:
+      after: sdk.acceptInvite.accept()
+      before: sdk.Accept Invite.AcceptInvite()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/automations"]["post"]
+    update:
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.automations.create()
+      before: sdk.Automations.CreateAutomation()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/subscription/upcoming-invoice"]["get"]
+    update:
+      x-speakeasy-group: stripeSubscriptions
+    x-speakeasy-metadata:
+      after: sdk.stripeSubscriptions.getUpcomingInvoice()
+      before: sdk.Stripe Subscriptions.GetUpcomingInvoice()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/browse"]["get"]
+    update:
+      x-speakeasy-name-override: workspace
+    x-speakeasy-metadata:
+      after: sdk.browse.workspace()
+      before: sdk.Browse.BrowseWorkspaceWorkspaces()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}/dataviews/{dataview_id}/pipeline/tasks/{task_id}"]["patch"]
+    update:
+      x-speakeasy-group: dataviewPipelineTasks
+      x-speakeasy-name-override: edit
+    x-speakeasy-metadata:
+      after: sdk.dataviewPipelineTasks.edit()
+      before: sdk.Dataview pipeline Task.EditTask()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/gdpr_hooks/shopify/customers/data_request"]["post"]
+    update:
+      x-speakeasy-group: shopifyPrivacyWebhooks
+      x-speakeasy-name-override: dataRequest
+    x-speakeasy-metadata:
+      after: sdk.shopifyPrivacyWebhooks.dataRequest()
+      before: sdk.Shopify Privacy Webhooks.ShopifyDataRequest()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/files/{file_id}"]["delete"]
+    update:
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.files.delete()
+      before: sdk.Files.DeleteFile()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/support/workspaces/{workspace_id}"]["delete"]
+    update:
+      x-speakeasy-group: workspacesSupport
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.workspacesSupport.delete()
+      before: sdk.Workspaces Support.DeleteWorkspace()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/users"]["get"]
+    update:
+      x-speakeasy-name-override: listUsers
+    x-speakeasy-metadata:
+      after: sdk.workspaces.listUsers()
+      before: sdk.Workspaces.GetUsersInWorkspace()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/automations/{automation_id}"]["delete"]
+    update:
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.automations.delete()
+      before: sdk.Automations.DeleteAutomation()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/preferences"]["patch"]
+    update:
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.preferences.update()
+      before: sdk.Preferences.UpdateUserPreferences()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/subscription/payment-methods"]["get"]
+    update:
+      x-speakeasy-group: stripeSubscriptions
+    x-speakeasy-metadata:
+      after: sdk.stripeSubscriptions.getPaymentMethods()
+      before: sdk.Stripe Subscriptions.GetPaymentMethods()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/subscription/feature-profiles"]["get"]
+    update:
+      x-speakeasy-group: featureProfiles
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.featureProfiles.list()
+      before: sdk.Feature Profiles.ListFeatureProfiles()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}/dataviews/{dataview_id}"]["get"]
+    update:
+      x-speakeasy-name-override: getInformation
+    x-speakeasy-metadata:
+      after: sdk.dataviews.getInformation()
+      before: sdk.Dataviews.GetDataviewInformationIndividual()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/external_keys"]["get"]
+    update:
+      x-speakeasy-group: externalKeys
+      x-speakeasy-name-override: getByWorkspaceId
+    x-speakeasy-metadata:
+      after: sdk.externalKeys.getByWorkspaceId()
+      before: sdk.External keys.GetKeysByWorkspaceId()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/files"]["delete"]
+    update:
+      x-speakeasy-name-override: remove
+    x-speakeasy-metadata:
+      after: sdk.files.remove()
+      before: sdk.Files.DeleteFiles()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/subscription_v1"]["patch"]
+    update:
+      x-speakeasy-name-override: updateDetail
+    x-speakeasy-metadata:
+      after: sdk.subscription.updateDetail()
+      before: sdk.Subscription.UpdateSubscriptionDetail()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}/batches"]["post"]
+    update:
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.batches.create()
+      before: sdk.Batches.CreateBatch()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/folders"]["post"]
+    update:
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.folders.create()
+      before: sdk.Folders.CreateFolder()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/automations/{automation_id}"]["get"]
+    update:
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.automations.get()
+      before: sdk.Automations.GetAutomation()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/subscription/features/{feature_id}"]["delete"]
+    update:
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.features.delete()
+      before: sdk.Features.DeleteFeature()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}/dataviews/{dataview_id}/data/generate"]["get"]
+    update:
+      x-speakeasy-group: generateAiBasedData
+    x-speakeasy-metadata:
+      after: sdk.generateAiBasedData.getValidationInfo()
+      before: sdk.Generate AI based data.GetValidationInfo()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/connectors/{connector_key}/connections/{connection_key}"]["patch"]
+    update:
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.connections.update()
+      before: sdk.Connections.UpdateConnection()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/jobs"]["get"]
+    update:
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.jobs.list()
+      before: sdk.Jobs.GetJobs()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets"]["patch"]
+    update:
+      x-speakeasy-name-override: rename
+    x-speakeasy-metadata:
+      after: sdk.datasets.rename()
+      before: sdk.Datasets.UpdateDatasets()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/support/workspaces/{workspace_id}/users/{user_id}"]["delete"]
+    update:
+      x-speakeasy-group: usersSupport
+      x-speakeasy-name-override: remove
+    x-speakeasy-metadata:
+      after: sdk.usersSupport.remove()
+      before: sdk.Users Support.RemoveWorkspaceUser()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/subscription/connector-profiles/{profile_id}/connectors"]["post"]
+    update:
+      x-speakeasy-group: connectorProfiles
+      x-speakeasy-name-override: addConnector
+    x-speakeasy-metadata:
+      after: sdk.connectorProfiles.addConnector()
+      before: sdk.Connector Profiles.AddConnectorToProfile()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/subscription/check/check-feature"]["post"]
+    update:
+      x-speakeasy-group: subscriptionAccessControl
+    x-speakeasy-metadata:
+      after: sdk.subscriptionAccessControl.checkFeatureAccess()
+      before: sdk.Subscription Access Control.CheckFeatureAccess()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/chargebee-plan"]["get"]
+    update:
+      x-speakeasy-group: chargebeePlan
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.chargebeePlan.get()
+      before: sdk.Chargebee Plan.GetChargebeePlan()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}/dataviews"]["delete"]
+    update:
+      x-speakeasy-name-override: deleteMultiple
+    x-speakeasy-metadata:
+      after: sdk.dataviews.deleteMultiple()
+      before: sdk.Dataviews.DeleteMultipleDataviews()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/subscription/self-serve-plans"]["get"]
+    update:
+      x-speakeasy-group: selfServeSubscriptionPlans
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.selfServeSubscriptionPlans.list()
+      before: sdk.Self-Serve Subscription Plans.ListSelfServePlans()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/settings/users"]["patch"]
+    update:
+      x-speakeasy-group: ownerUserControlSettings
+    x-speakeasy-metadata:
+      after: sdk.ownerUserControlSettings.transferOwnerships()
+      before: sdk.Owner user control settings.TransferOwnerships()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/subscription/cancel"]["post"]
+    update:
+      x-speakeasy-group: stripeSubscriptions
+      x-speakeasy-name-override: cancelWorkspace
+    x-speakeasy-metadata:
+      after: sdk.stripeSubscriptions.cancelWorkspace()
+      before: sdk.Stripe Subscriptions.CancelWorkspaceSubscription()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/webhooks"]["post"]
+    update:
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.webhooks.create()
+      before: sdk.Webhooks.CreateAWebhook()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/app-usage"]["get"]
+    update:
+      x-speakeasy-group: appUsage
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.appUsage.get()
+      before: sdk.App Usage.GetAppUsage()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}/dataviews/{dataview_id}/pipeline/tasks"]["post"]
+    update:
+      x-speakeasy-group: dataviewPipelineTasks
+      x-speakeasy-name-override: add
+    x-speakeasy-metadata:
+      after: sdk.dataviewPipelineTasks.add()
+      before: sdk.Dataview pipeline Tasks.AddTask()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/connectors/{connector_key}/connections/{connection_key}/ds_configs"]["get"]
+    update:
+      x-speakeasy-group: dsConfigs
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.dsConfigs.list()
+      before: sdk.DsConfig.ListDsConfigs()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/support/workspaces/{workspace_id}"]["patch"]
+    update:
+      x-speakeasy-group: workspacesSupport
+      x-speakeasy-name-override: updateDetail
+    x-speakeasy-metadata:
+      after: sdk.workspacesSupport.updateDetail()
+      before: sdk.Workspaces Support.UpdateWorkspaceDetail()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/connectors/{connector_key}/connections/{connection_key}/ds_configs"]["delete"]
+    update:
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.dsConfig.delete()
+      before: sdk.DsConfig.DeleteDsConfigs()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}/batches"]["delete"]
+    update:
+      x-speakeasy-name-override: remove
+    x-speakeasy-metadata:
+      after: sdk.batches.remove()
+      before: sdk.Batches.DeleteBatches()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/folders/{folder_id}/browse"]["get"]
+    update:
+      x-speakeasy-name-override: folders
+    x-speakeasy-metadata:
+      after: sdk.browse.folders()
+      before: sdk.Browse.BrowseFolderFolders()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/support/workspaces/{workspace_id}"]["get"]
+    update:
+      x-speakeasy-group: workspacesSupport
+      x-speakeasy-name-override: getDetail
+    x-speakeasy-metadata:
+      after: sdk.workspacesSupport.getDetail()
+      before: sdk.Workspaces Support.GetWorkspaceDetail()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/users/{user_id}"]["patch"]
+    update:
+      x-speakeasy-name-override: updateUser
+    x-speakeasy-metadata:
+      after: sdk.workspaces.updateUser()
+      before: sdk.Workspaces.UpdateUserInWorkspace()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects"]["post"]
+    update:
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.projects.create()
+      before: sdk.Projects.CreateProject()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/subscription/features"]["post"]
+    update:
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.features.create()
+      before: sdk.Features.CreateFeature()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/subscription/plans/{plan_id}/archive"]["post"]
+    update:
+      x-speakeasy-group: subscriptionPlans
+      x-speakeasy-name-override: archive
+    x-speakeasy-metadata:
+      after: sdk.subscriptionPlans.archive()
+      before: sdk.Subscription Plans.ArchivePlan()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/gdpr_hooks/shopify/shop/redact"]["post"]
+    update:
+      x-speakeasy-group: shopifyPrivacyWebhooks
+      x-speakeasy-name-override: shopRedact
+    x-speakeasy-metadata:
+      after: sdk.shopifyPrivacyWebhooks.shopRedact()
+      before: sdk.Shopify Privacy Webhooks.ShopifyShopRedact()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/users"]["post"]
+    update:
+      x-speakeasy-name-override: addUser
+    x-speakeasy-metadata:
+      after: sdk.projects.addUser()
+      before: sdk.Projects.AddUserProject()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}/dataviews/{dataview_id}/conditional-format"]["delete"]
+    update:
+      x-speakeasy-group: conditionalFormat
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.conditionalFormat.delete()
+      before: sdk.Conditional Format.DeleteConditionalFormat()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}/dataviews/{dataview_id}/data/generate"]["post"]
+    update:
+      x-speakeasy-group: generateAiData
+    x-speakeasy-metadata:
+      after: sdk.generateAiData.preview()
+      before: sdk.Generate AI data.Preview()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/settings/users"]["get"]
+    update:
+      x-speakeasy-group: ownerUserControlSettings
+      x-speakeasy-name-override: listUsers
+    x-speakeasy-metadata:
+      after: sdk.ownerUserControlSettings.listUsers()
+      before: sdk.Owner user control settings.ListUsersOfWorkspaces()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/clientapps/{client_key}"]["get"]
+    update:
+      x-speakeasy-group: clientApps
+      x-speakeasy-name-override: getDetails
+    x-speakeasy-metadata:
+      after: sdk.clientApps.getDetails()
+      before: sdk.Client Apps.AppDetails()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/subscription/connectors"]["post"]
+    update:
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.connectors.create()
+      before: sdk.Connectors.CreateConnector()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/split-segments"]["get"]
+    update:
+      x-speakeasy-group: splitSegments
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.splitSegments.get()
+      before: sdk.Split Segments.GetSegments()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}/dataviews/{dataview_id}"]["delete"]
+    update:
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.dataviews.delete()
+      before: sdk.Dataviews.DeleteDataview()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/automations/{automation_id}"]["patch"]
+    update:
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.automations.update()
+      before: sdk.Automations.UpdateAutomation()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}/dataviews/{dataview_id}/data"]["post"]
+    update:
+      x-speakeasy-name-override: retrievedata
+    x-speakeasy-metadata:
+      after: sdk.dataviews.retrievedata()
+      before: sdk.Dataviews.GetDataviewDataPost()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/webhooks"]["get"]
+    update:
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.webhooks.list()
+      before: sdk.Webhooks.ListWebhooks()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/subscription/plans/{plan_id}/storage-tiers"]["put"]
+    update:
+      x-speakeasy-group: subscriptionPlans
+    x-speakeasy-metadata:
+      after: sdk.subscriptionPlans.updateStorageTiers()
+      before: sdk.Subscription Plans.UpdateStorageTiers()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/connectors/{connector_key}/connections/{connection_key}/ds_configs/{ds_config_key}"]["get"]
+    update:
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.dsConfig.get()
+      before: sdk.DsConfig.GetDsConfig()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/subscription/connectors"]["get"]
+    update:
+      x-speakeasy-name-override: fetch
+    x-speakeasy-metadata:
+      after: sdk.connectors.fetch()
+      before: sdk.Connectors.ListSubscriptionConnectors()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/subscription/check/check-limits"]["post"]
+    update:
+      x-speakeasy-group: subscriptionAccessControl
+    x-speakeasy-metadata:
+      after: sdk.subscriptionAccessControl.checkUsageLimits()
+      before: sdk.Subscription Access Control.CheckUsageLimits()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects"]["delete"]
+    update:
+      x-speakeasy-name-override: removeAll
+    x-speakeasy-metadata:
+      after: sdk.projects.removeAll()
+      before: sdk.Projects.DeleteProjects()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}/dataviews/{dataview_id}/conditional-format"]["patch"]
+    update:
+      x-speakeasy-group: conditionalFormat
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.conditionalFormat.update()
+      before: sdk.Conditional Format.UpdateConditionalFormat()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/self"]["get"]
+    update:
+      x-speakeasy-group: users
+      x-speakeasy-name-override: getSelf
+    x-speakeasy-metadata:
+      after: sdk.users.getSelf()
+      before: sdk.Self.GetUserDetails()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/connectors/{connector_key}/connections/{connection_key}"]["get"]
+    update:
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.connections.get()
+      before: sdk.Connections.GetConnection()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/files/{file_id}"]["get"]
+    update:
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.files.get()
+      before: sdk.Files.GetFileDetails()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}"]["delete"]
+    update:
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.projects.delete()
+      before: sdk.Projects.DeleteProject()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces"]["get"]
+    update:
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.workspaces.list()
+      before: sdk.Workspaces.GetWorkspaces()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/external_keys/{key_id}"]["delete"]
+    update:
+      x-speakeasy-group: externalKeys
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.externalKeys.delete()
+      before: sdk.External key.DeleteExternalKey()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/split-segments"]["patch"]
+    update:
+      x-speakeasy-group: splitSegments
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.splitSegments.update()
+      before: sdk.Split Segments.UpdateSegments()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/subscription/connectors/{connector_id}"]["delete"]
+    update:
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.connectors.delete()
+      before: sdk.Connectors.DeleteConnector()
+      created_at: 1756404769160
+      reviewed_at: 1756404771951
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}/dataviews/{dataview_id}/pipeline/tasks"]["get"]
+    update:
+      x-speakeasy-group: dataviewPipelineTasks
+    x-speakeasy-metadata:
+      after: sdk.dataviewPipelineTasks.getPipelineTasks()
+      before: sdk.Dataview pipeline Tasks.GetPipelineTasks()
+      created_at: 1756404769160
+      reviewed_at: 1756404771952
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}/dataviews/{dataview_id}/conditional-format"]["get"]
+    update:
+      x-speakeasy-group: conditionalFormat
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.conditionalFormat.get()
+      before: sdk.Conditional Format.GetConditionalFormat()
+      created_at: 1756404769161
+      reviewed_at: 1756404771952
+      type: method-name
+  - target: $["paths"]["/subscription/plans"]["get"]
+    update:
+      x-speakeasy-group: subscriptionPlans
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.subscriptionPlans.list()
+      before: sdk.Subscription Plans.ListSubscriptionPlans()
+      created_at: 1756404769161
+      reviewed_at: 1756404771952
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}/batches/{batch_id}"]["get"]
+    update:
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.batches.get()
+      before: sdk.Batches.GetBatch()
+      created_at: 1756404769161
+      reviewed_at: 1756404771952
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/clientapps"]["post"]
+    update:
+      x-speakeasy-group: clientApps
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.clientApps.create()
+      before: sdk.Client Apps.CreateApp()
+      created_at: 1756404769161
+      reviewed_at: 1756404771952
+      type: method-name
+  - target: $["paths"]["/subscription/stripe/webhook"]["post"]
+    update:
+      x-speakeasy-group: stripeWebhooks
+      x-speakeasy-name-override: handle
+    x-speakeasy-metadata:
+      after: sdk.stripeWebhooks.handle()
+      before: sdk.Stripe Webhooks.HandleStripeWebhook()
+      created_at: 1756404769161
+      reviewed_at: 1756404771952
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}/dataviews/{dataview_id}/data"]["get"]
+    update:
+      x-speakeasy-name-override: getData
+    x-speakeasy-metadata:
+      after: sdk.dataviews.getData()
+      before: sdk.Dataviews.GetDataviewData()
+      created_at: 1756404769161
+      reviewed_at: 1756404771952
+      type: method-name
+  - target: $["paths"]["/support/workspaces/{workspace_id}/users"]["get"]
+    update:
+      x-speakeasy-group: usersSupport
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.usersSupport.list()
+      before: sdk.Users Support.GetUserList()
+      created_at: 1756404769161
+      reviewed_at: 1756404771952
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}"]["delete"]
+    update:
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.workspaces.delete()
+      before: sdk.Workspaces.DeleteUserWorkspace()
+      created_at: 1756404769161
+      reviewed_at: 1756404771952
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/connectors/{connector_key}/connections/{connection_key}"]["delete"]
+    update:
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.connections.delete()
+      before: sdk.Connections.DeleteConnection()
+      created_at: 1756404769161
+      reviewed_at: 1756404771952
+      type: method-name
+  - target: $["paths"]["/support/workspaces/{workspace_id}/users"]["patch"]
+    update:
+      x-speakeasy-group: usersSupport
+      x-speakeasy-name-override: transferRoles
+    x-speakeasy-metadata:
+      after: sdk.usersSupport.transferRoles()
+      before: sdk.Users Support.TransferUserRoles()
+      created_at: 1756404769161
+      reviewed_at: 1756404771952
+      type: method-name
+  - target: $["paths"]["/browse"]["get"]
+    update:
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.browse.get()
+      before: sdk.Browse.BrowseResources()
+      created_at: 1756404769161
+      reviewed_at: 1756404771952
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/schedules/{schedule_id}"]["get"]
+    update:
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.schedules.get()
+      before: sdk.Schedules.GetSchedule()
+      created_at: 1756404769161
+      reviewed_at: 1756404771952
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/subscription_v1"]["get"]
+    update:
+      x-speakeasy-group: subscriptions
+      x-speakeasy-name-override: getDetail
+    x-speakeasy-metadata:
+      after: sdk.subscriptions.getDetail()
+      before: sdk.Subscription.GetWkspSubscriptionDetail()
+      created_at: 1756404769161
+      reviewed_at: 1756404771952
+      type: method-name
+  - target: $["paths"]["/support/workspaces"]["post"]
+    update:
+      x-speakeasy-group: workspacesSupport
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.workspacesSupport.create()
+      before: sdk.Workspaces Support.CreateWorkspaces()
+      created_at: 1756404769161
+      reviewed_at: 1756404771952
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/projects/{project_id}/datasets/{dataset_id}/dataviews/{dataview_id}/pipeline/tasks/{task_id}"]["delete"]
+    update:
+      x-speakeasy-group: dataviewPipelineTasks
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.dataviewPipelineTasks.delete()
+      before: sdk.Dataview pipeline Task.DeleteTask()
+      created_at: 1756404769161
+      reviewed_at: 1756404771952
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/subscription"]["post"]
+    update:
+      x-speakeasy-group: stripeSubscriptions
+      x-speakeasy-name-override: createWorkspace
+    x-speakeasy-metadata:
+      after: sdk.stripeSubscriptions.createWorkspace()
+      before: sdk.Stripe Subscriptions.CreateWorkspaceSubscription()
+      created_at: 1756404769161
+      reviewed_at: 1756404771952
+      type: method-name
+  - target: $["paths"]["/workspaces/{workspace_id}/clientapps"]["get"]
+    update:
+      x-speakeasy-group: clientApps
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.clientApps.list()
+      before: sdk.Client Apps.ListApps()
+      created_at: 1756404769161
+      reviewed_at: 1756404771952
+      type: method-name
+  - target: $["paths"]["/subscription/feature-profiles/{profile_id}"]["put"]
+    update:
+      x-speakeasy-group: featureProfiles
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.featureProfiles.update()
+      before: sdk.Feature Profiles.UpdateFeatureProfile()
+      created_at: 1756404769161
+      reviewed_at: 1756404771952
+      type: method-name
+  - target: $["paths"]["/support/workspaces/{workspace_id}/sms"]["get"]
+    update:
+      x-speakeasy-group: subscriptionsSupport
+      x-speakeasy-name-override: getDetail
+    x-speakeasy-metadata:
+      after: sdk.subscriptionsSupport.getDetail()
+      before: sdk.Subscriptions Support.GetSubscriptionDetail()
+      created_at: 1756404769161
+      reviewed_at: 1756404771952
+      type: method-name

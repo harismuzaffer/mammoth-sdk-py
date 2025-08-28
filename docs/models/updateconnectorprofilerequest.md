@@ -1,0 +1,9 @@
+# UpdateConnectorProfileRequest
+
+
+## Fields
+
+| Field                                                                                          | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `profile_id`                                                                                   | *int*                                                                                          | :heavy_check_mark:                                                                             | N/A                                                                                            |
+| `update_connector_profile_request_schema`                                                      | [models.UpdateConnectorProfileRequestSchema](../models/updateconnectorprofilerequestschema.md) | :heavy_check_mark:                                                                             | N/A                                                                                            |

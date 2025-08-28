@@ -1,0 +1,11 @@
+# CreateDataview
+
+
+## Fields
+
+| Field                                                                  | Type                                                                   | Required                                                               | Description                                                            | Example                                                                |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| `name`                                                                 | *OptionalNullable[str]*                                                | :heavy_minus_sign:                                                     | Dataview Name                                                          | {<br/>"value": "New Dataview"<br/>}                                    |
+| `clone_config_from`                                                    | *OptionalNullable[int]*                                                | :heavy_minus_sign:                                                     | Clone config from                                                      | {<br/>"value": {<br/>"clone_config_from": {<br/>"dataview_id": 1<br/>}<br/>}<br/>} |
+| `dataview_config`                                                      | [OptionalNullable[models.DataviewConfig]](../models/dataviewconfig.md) | :heavy_minus_sign:                                                     | Dataview Config                                                        |                                                                        |
+| `extra_condition`                                                      | [OptionalNullable[models.ExtraCondition]](../models/extracondition.md) | :heavy_minus_sign:                                                     | Extra Condition                                                        |                                                                        |

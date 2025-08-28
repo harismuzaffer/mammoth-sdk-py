@@ -1,0 +1,9 @@
+# UpdateWorkspaceDetailRequest
+
+
+## Fields
+
+| Field                                                                            | Type                                                                             | Required                                                                         | Description                                                                      | Example                                                                          |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `workspace_id`                                                                   | *int*                                                                            | :heavy_check_mark:                                                               | Id of the workspace to work with                                                 | 4                                                                                |
+| `support_schema_workspace_update`                                                | [models.SupportSchemaWorkspaceUpdate](../models/supportschemaworkspaceupdate.md) | :heavy_check_mark:                                                               | N/A                                                                              | {<br/>"name": "Docs",<br/>"plan_id": "new_pro",<br/>"payment_frequency": "monthly"<br/>} |

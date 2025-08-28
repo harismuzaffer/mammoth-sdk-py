@@ -1,0 +1,12 @@
+# BatchDescriptionCloud
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          | Example                                                              |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `space_id`                                                           | *OptionalNullable[int]*                                              | :heavy_minus_sign:                                                   | Space ID                                                             | 1                                                                    |
+| `from_date`                                                          | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_minus_sign:                                                   | From Date                                                            | 2024-02-04T14:34:41.532945Z                                          |
+| `to_date`                                                            | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_minus_sign:                                                   | To Date                                                              | 2024-02-04T14:44:41.532945Z                                          |
+| `data_file_path`                                                     | *OptionalNullable[str]*                                              | :heavy_minus_sign:                                                   | Data File Path                                                       | /project-3/cloud_19_qciyyVV2pz_/iq9BwsIg84.csv                       |
+| `on_refresh_action`                                                  | *OptionalNullable[str]*                                              | :heavy_minus_sign:                                                   | On Refresh Action                                                    | replace                                                              |

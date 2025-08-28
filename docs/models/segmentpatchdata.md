@@ -1,0 +1,10 @@
+# SegmentPatchData
+
+
+## Fields
+
+| Field                                                                      | Type                                                                       | Required                                                                   | Description                                                                | Example                                                                    |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `op`                                                                       | [models.SegmentPatchDataOperation](../models/segmentpatchdataoperation.md) | :heavy_check_mark:                                                         | Operation to be performed on the segment                                   | {<br/>"summary": "Sample Operation",<br/>"value": "add"<br/>}              |
+| `path`                                                                     | *Literal["segments"]*                                                      | :heavy_check_mark:                                                         | Path of the patch request                                                  | {<br/>"summary": "Sample Path",<br/>"value": "segments"<br/>}              |
+| `value`                                                                    | *str*                                                                      | :heavy_check_mark:                                                         | Value of the patch request                                                 | {<br/>"summary": "Sample Segment Name",<br/>"value": "segment_name"<br/>}  |

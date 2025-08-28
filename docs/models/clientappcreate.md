@@ -1,0 +1,16 @@
+# ClientAppCreate
+
+Details of the app to be created
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          | Example                                                              |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `app_name`                                                           | *str*                                                                | :heavy_check_mark:                                                   | Name of client app or api tokens                                     | {<br/>"value": "New Example Client App Name"<br/>}                   |
+| `description`                                                        | *str*                                                                | :heavy_check_mark:                                                   | Description of client app or api tokens                              | {<br/>"value": "Example Client App Description"<br/>}                |
+| `project_id`                                                         | *OptionalNullable[int]*                                              | :heavy_minus_sign:                                                   | Project ID                                                           | {<br/>"value": "Sample project ID"<br/>}                             |
+| `api_key`                                                            | *str*                                                                | :heavy_check_mark:                                                   | App key of client app or api tokens                                  | {<br/>"value": "abcDefGhiJklMnoPqrStuVwxYz1234567890"<br/>}          |
+| `api_secret`                                                         | *str*                                                                | :heavy_check_mark:                                                   | App Secret of client app or api tokens                               | {<br/>"value": "secret_abcDefGhiJklMnoPqrStuVwxYz1234567890"<br/>}   |
+| `encrypted_key`                                                      | *str*                                                                | :heavy_check_mark:                                                   | Encrypted keyof client app or api tokens                             | {<br/>"value": "encrypted_abcDefGhiJklMnoPqrStuVwxYz1234567890"<br/>} |
+| `encrypted_secret`                                                   | *str*                                                                | :heavy_check_mark:                                                   | Encrypted secret of client app or api tokens                         | {<br/>"value": "encrypted_secret_abcDefGhiJklMnoPqrStuVwxYz1234567890"<br/>} |

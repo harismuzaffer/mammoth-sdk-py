@@ -1,0 +1,15 @@
+# AddonResponse
+
+Details of the created addon
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          | Example                                                              |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `id`                                                                 | *int*                                                                | :heavy_check_mark:                                                   | Unique identifier for the addon                                      | {<br/>"value": 1<br/>}                                               |
+| `workspace_id`                                                       | *int*                                                                | :heavy_check_mark:                                                   | ID of the workspace this addon belongs to                            | {<br/>"value": 123<br/>}                                             |
+| `addon_type`                                                         | *str*                                                                | :heavy_check_mark:                                                   | Type of addon (connector, storage, user)                             | {<br/>"value": "connector"<br/>}                                     |
+| `quantity`                                                           | *int*                                                                | :heavy_check_mark:                                                   | Quantity of the addon                                                | {<br/>"value": 1<br/>}                                               |
+| `status`                                                             | *str*                                                                | :heavy_check_mark:                                                   | Status of the addon (pending, active, cancelled)                     | {<br/>"value": "pending"<br/>}                                       |
+| `created_at`                                                         | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_minus_sign:                                                   | When the addon was created                                           | {<br/>"value": "2021-08-10T10:00:00"<br/>}                           |

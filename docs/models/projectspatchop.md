@@ -1,0 +1,10 @@
+# ProjectsPatchOp
+
+
+## Fields
+
+| Field                                                                  | Type                                                                   | Required                                                               | Description                                                            | Example                                                                |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| `op`                                                                   | [models.ProjectsPatchOpOp](../models/projectspatchopop.md)             | :heavy_check_mark:                                                     | Operation                                                              | {<br/>"value": "replace"<br/>}                                         |
+| `path`                                                                 | [models.ProjectsPatchOpPath](../models/projectspatchoppath.md)         | :heavy_check_mark:                                                     | Path                                                                   | {<br/>"value": "role"<br/>}                                            |
+| `value`                                                                | List[[models.UsersToProjectsPatch](../models/userstoprojectspatch.md)] | :heavy_check_mark:                                                     | N/A                                                                    |                                                                        |

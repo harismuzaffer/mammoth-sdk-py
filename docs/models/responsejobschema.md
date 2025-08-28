@@ -1,0 +1,14 @@
+# ResponseJobSchema
+
+
+## Fields
+
+| Field                                                                      | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `id`                                                                       | *int*                                                                      | :heavy_check_mark:                                                         | N/A                                                                        |
+| `status`                                                                   | [models.ResponseJobSchemaStatus](../models/responsejobschemastatus.md)     | :heavy_check_mark:                                                         | N/A                                                                        |
+| `response`                                                                 | [models.ResponseJobSchemaResponse](../models/responsejobschemaresponse.md) | :heavy_check_mark:                                                         | N/A                                                                        |
+| `last_updated_at`                                                          | [date](https://docs.python.org/3/library/datetime.html#date-objects)       | :heavy_check_mark:                                                         | N/A                                                                        |
+| `created_at`                                                               | [date](https://docs.python.org/3/library/datetime.html#date-objects)       | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `path`                                                                     | *OptionalNullable[str]*                                                    | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `operation`                                                                | *OptionalNullable[str]*                                                    | :heavy_minus_sign:                                                         | N/A                                                                        |

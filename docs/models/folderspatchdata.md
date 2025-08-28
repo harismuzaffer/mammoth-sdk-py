@@ -1,0 +1,10 @@
+# FoldersPatchData
+
+
+## Fields
+
+| Field                                                                      | Type                                                                       | Required                                                                   | Description                                                                | Example                                                                    |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `op`                                                                       | [models.FoldersPatchDataOperation](../models/folderspatchdataoperation.md) | :heavy_check_mark:                                                         | Operation                                                                  | {<br/>"value": "move"<br/>}                                                |
+| `from_`                                                                    | List[*int*]                                                                | :heavy_check_mark:                                                         | Resource Ids to be moved                                                   | {<br/>"value": [<br/>8024<br/>]<br/>}                                      |
+| `path`                                                                     | [models.DestinationFolderID](../models/destinationfolderid.md)             | :heavy_check_mark:                                                         | Destination Folder Id/'root' for moving resources to root folder           | {<br/>"value": 8024<br/>}                                                  |

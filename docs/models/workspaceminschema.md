@@ -1,0 +1,11 @@
+# WorkspaceMinSchema
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          | Example                                                              |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `id`                                                                 | *int*                                                                | :heavy_check_mark:                                                   | ID of the workspace                                                  | {<br/>"value": 2<br/>}                                               |
+| `name`                                                               | *str*                                                                | :heavy_check_mark:                                                   | Name of the workspace to be created                                  | {<br/>"value": "Sample Workspace Name"<br/>}                         |
+| `status`                                                             | *str*                                                                | :heavy_check_mark:                                                   | Status of the workspace                                              | {<br/>"value": "ACTIVE"<br/>}                                        |
+| `last_updated_at`                                                    | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_check_mark:                                                   | Last Updated At of the workspace                                     | {<br/>"summary": "Sample Date",<br/>"value": "2023-12-20T03:37:40"<br/>} |

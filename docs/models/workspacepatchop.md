@@ -1,0 +1,10 @@
+# WorkspacePatchOp
+
+
+## Fields
+
+| Field                                                                        | Type                                                                         | Required                                                                     | Description                                                                  | Example                                                                      |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `op`                                                                         | *Literal["replace"]*                                                         | :heavy_check_mark:                                                           | Operation                                                                    | {<br/>"value": "replace"<br/>}                                               |
+| `path`                                                                       | [models.WorkspacePatchOpPath](../models/workspacepatchoppath.md)             | :heavy_check_mark:                                                           | Path                                                                         | {<br/>"value": "name"<br/>}                                                  |
+| `value`                                                                      | [models.WorkspacePatchOpValueUnion](../models/workspacepatchopvalueunion.md) | :heavy_check_mark:                                                           | New Workspace name, metadata, plan_id, or billing_cycle                      | {<br/>"value": "My cool workspace"<br/>}                                     |

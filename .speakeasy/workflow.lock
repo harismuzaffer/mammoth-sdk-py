@@ -1,0 +1,39 @@
+speakeasyVersion: 1.606.8
+sources:
+    Mammoth Analytics:
+        sourceNamespace: mammoth-analytics
+        sourceRevisionDigest: sha256:4ec46285b37c911ca2c6650702d592308de1deddf62aecef5a997f456f386628
+        sourceBlobDigest: sha256:12712a2472f039a6feddf7337954c15b7f749154e611990e628b22ee4ab6e298
+        tags:
+            - latest
+            - 0.1.0
+targets:
+    mammoth-analytics:
+        source: Mammoth Analytics
+        sourceNamespace: mammoth-analytics
+        sourceRevisionDigest: sha256:4ec46285b37c911ca2c6650702d592308de1deddf62aecef5a997f456f386628
+        sourceBlobDigest: sha256:12712a2472f039a6feddf7337954c15b7f749154e611990e628b22ee4ab6e298
+        codeSamplesNamespace: mammoth-analytics-python-code-samples
+        codeSamplesRevisionDigest: sha256:5f83946c3cb4b55389b072d41e6ae270a611fdbeac4616f6c78fb1f96424e7c4
+workflow:
+    workflowVersion: 1.0.0
+    speakeasyVersion: latest
+    sources:
+        Mammoth Analytics:
+            inputs:
+                - location: ../pyopenapi_full.json
+            overlays:
+                - location: .speakeasy/speakeasy-modifications-overlay.yaml
+            output: .speakeasy/out.openapi.yaml
+            registry:
+                location: registry.speakeasyapi.dev/mammoth-analytics/litestar/mammoth-analytics
+    targets:
+        mammoth-analytics:
+            target: python
+            source: Mammoth Analytics
+            codeSamples:
+                registry:
+                    location: registry.speakeasyapi.dev/mammoth-analytics/litestar/mammoth-analytics-python-code-samples
+                labelOverride:
+                    fixedValue: Python (SDK)
+                blocking: false

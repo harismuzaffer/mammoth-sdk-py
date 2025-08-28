@@ -1,0 +1,12 @@
+# WorkspaceUserGetResponse
+
+
+## Fields
+
+| Field                                                         | Type                                                          | Required                                                      | Description                                                   | Example                                                       |
+| ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
+| `users`                                                       | List[[models.UserSchema](../models/userschema.md)]            | :heavy_check_mark:                                            | N/A                                                           |                                                               |
+| `invites`                                                     | List[[models.Invites](../models/invites.md)]                  | :heavy_minus_sign:                                            | N/A                                                           |                                                               |
+| `limit`                                                       | *Optional[int]*                                               | :heavy_minus_sign:                                            | Max number of users to return                                 | {<br/>"summary": "Limit returned user count to 10",<br/>"value": 10<br/>} |
+| `offset`                                                      | *Optional[int]*                                               | :heavy_minus_sign:                                            | Offset from the beginning of the users list                   | {<br/>"summary": "Start from 2nd user",<br/>"value": 1<br/>}  |
+| `next`                                                        | *str*                                                         | :heavy_check_mark:                                            | N/A                                                           |                                                               |

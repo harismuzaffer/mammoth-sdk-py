@@ -1,0 +1,10 @@
+# AutomationPatchData
+
+
+## Fields
+
+| Field                                                                              | Type                                                                               | Required                                                                           | Description                                                                        | Example                                                                            |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `op`                                                                               | [models.AutomationPatchDataOperation](../models/automationpatchdataoperation.md)   | :heavy_check_mark:                                                                 | Operation                                                                          | {<br/>"value": "replace"<br/>}                                                     |
+| `path`                                                                             | [models.AutomationPatchDataPath](../models/automationpatchdatapath.md)             | :heavy_check_mark:                                                                 | Path                                                                               | {<br/>"value": "password"<br/>}                                                    |
+| `value`                                                                            | [models.AutomationPatchDataValueUnion](../models/automationpatchdatavalueunion.md) | :heavy_check_mark:                                                                 | Value to update automation details                                                 | {<br/>"value": {<br/>"name": "test"<br/>}<br/>}                                    |

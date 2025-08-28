@@ -1,0 +1,17 @@
+# WorkspaceSubscriptionStatusDataSchema
+
+
+## Fields
+
+| Field                                                              | Type                                                               | Required                                                           | Description                                                        |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| `workspace_id`                                                     | *int*                                                              | :heavy_check_mark:                                                 | N/A                                                                |
+| `subscription_status`                                              | *OptionalNullable[str]*                                            | :heavy_minus_sign:                                                 | N/A                                                                |
+| `has_active_subscription`                                          | *bool*                                                             | :heavy_check_mark:                                                 | N/A                                                                |
+| `stripe_subscription_id`                                           | *OptionalNullable[str]*                                            | :heavy_minus_sign:                                                 | N/A                                                                |
+| `stripe_customer_id`                                               | *OptionalNullable[str]*                                            | :heavy_minus_sign:                                                 | N/A                                                                |
+| `plan_id`                                                          | *OptionalNullable[int]*                                            | :heavy_minus_sign:                                                 | N/A                                                                |
+| `billing_cycle`                                                    | *OptionalNullable[str]*                                            | :heavy_minus_sign:                                                 | N/A                                                                |
+| `checkout_info`                                                    | [OptionalNullable[models.CheckoutInfo]](../models/checkoutinfo.md) | :heavy_minus_sign:                                                 | N/A                                                                |
+| `needs_checkout`                                                   | *bool*                                                             | :heavy_check_mark:                                                 | N/A                                                                |
+| `checkout_in_progress`                                             | *bool*                                                             | :heavy_check_mark:                                                 | N/A                                                                |

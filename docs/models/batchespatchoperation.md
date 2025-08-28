@@ -1,0 +1,10 @@
+# BatchesPatchOperation
+
+
+## Fields
+
+| Field                                                                      | Type                                                                       | Required                                                                   | Description                                                                | Example                                                                    |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `op`                                                                       | [models.BatchesPatchOperationOp](../models/batchespatchoperationop.md)     | :heavy_check_mark:                                                         | Operation                                                                  | {<br/>"value": "replace"<br/>}                                             |
+| `path`                                                                     | [models.BatchesPatchOperationPath](../models/batchespatchoperationpath.md) | :heavy_check_mark:                                                         | Path                                                                       | {<br/>"value": "batches"<br/>}                                             |
+| `value`                                                                    | [models.BatchesPatchValues](../models/batchespatchvalues.md)               | :heavy_check_mark:                                                         | Value to replace/add/remove the attribute                                  | {<br/>"value": {<br/>"suspend": [<br/>1,<br/>2,<br/>3<br/>],<br/>"restore": [<br/>4,<br/>8,<br/>6<br/>]<br/>}<br/>} |

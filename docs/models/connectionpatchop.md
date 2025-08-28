@@ -1,0 +1,10 @@
+# ConnectionPatchOp
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          | Example                                                              |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `op`                                                                 | *Literal["replace"]*                                                 | :heavy_check_mark:                                                   | Operation                                                            | {<br/>"value": "replace"<br/>}                                       |
+| `path`                                                               | *Literal["connection"]*                                              | :heavy_check_mark:                                                   | Path                                                                 | {<br/>"value": "connection"<br/>}                                    |
+| `value`                                                              | [models.ConnectionPatchOpValue](../models/connectionpatchopvalue.md) | :heavy_check_mark:                                                   | Patch value                                                          | {<br/>"value": {<br/>"database": "db"<br/>}<br/>}                    |

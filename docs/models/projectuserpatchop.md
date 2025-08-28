@@ -1,0 +1,10 @@
+# ProjectUserPatchOp
+
+
+## Fields
+
+| Field                                                                  | Type                                                                   | Required                                                               | Description                                                            | Example                                                                |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| `op`                                                                   | *Literal["replace"]*                                                   | :heavy_check_mark:                                                     | Operation                                                              | {<br/>"value": "replace"<br/>}                                         |
+| `path`                                                                 | *Literal["permissions"]*                                               | :heavy_check_mark:                                                     | Path                                                                   | {<br/>"value": "permissions"<br/>}                                     |
+| `value`                                                                | [models.ProjectUserPatchOpValue](../models/projectuserpatchopvalue.md) | :heavy_check_mark:                                                     | N/A                                                                    |                                                                        |

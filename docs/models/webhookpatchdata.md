@@ -1,0 +1,10 @@
+# WebhookPatchData
+
+
+## Fields
+
+| Field                                                                        | Type                                                                         | Required                                                                     | Description                                                                  | Example                                                                      |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `op`                                                                         | [models.WebhookPatchDataOperation](../models/webhookpatchdataoperation.md)   | :heavy_check_mark:                                                           | Operation                                                                    | {<br/>"value": "replace"<br/>}                                               |
+| `path`                                                                       | [models.WebhookPatchDataPath](../models/webhookpatchdatapath.md)             | :heavy_check_mark:                                                           | Path                                                                         | {<br/>"value": "is_secure"<br/>}                                             |
+| `value`                                                                      | [models.WebhookPatchDataValueUnion](../models/webhookpatchdatavalueunion.md) | :heavy_check_mark:                                                           | Value to update webhook configuration                                        | {<br/>"value": false<br/>}                                                   |

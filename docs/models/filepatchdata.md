@@ -1,0 +1,10 @@
+# FilePatchData
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          | Example                                                              |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `op`                                                                 | [models.FilePatchDataOperation](../models/filepatchdataoperation.md) | :heavy_check_mark:                                                   | Operation                                                            | {<br/>"value": "replace"<br/>}                                       |
+| `path`                                                               | [models.FilePatchDataPath](../models/filepatchdatapath.md)           | :heavy_check_mark:                                                   | Path                                                                 | {<br/>"value": "password"<br/>}                                      |
+| `value`                                                              | [models.FilePatchDataValue](../models/filepatchdatavalue.md)         | :heavy_check_mark:                                                   | Value to update files configuration                                  | {<br/>"value": "test"<br/>}                                          |

@@ -1,0 +1,10 @@
+# FolderPatchData
+
+
+## Fields
+
+| Field                                                                    | Type                                                                     | Required                                                                 | Description                                                              | Example                                                                  |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| `op`                                                                     | [models.FolderPatchDataOperation](../models/folderpatchdataoperation.md) | :heavy_check_mark:                                                       | Operation                                                                | {<br/>"value": "replace"<br/>}                                           |
+| `path`                                                                   | [models.FolderPatchDataPath](../models/folderpatchdatapath.md)           | :heavy_check_mark:                                                       | Path                                                                     | {<br/>"value": "name"<br/>}                                              |
+| `value`                                                                  | *str*                                                                    | :heavy_check_mark:                                                       | Value to update folders configuration                                    | {<br/>"value": "test"<br/>}                                              |

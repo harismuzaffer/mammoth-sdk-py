@@ -1,0 +1,10 @@
+# RegisterUserPatchSchema
+
+
+## Fields
+
+| Field                                                                            | Type                                                                             | Required                                                                         | Description                                                                      | Example                                                                          |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `op`                                                                             | *str*                                                                            | :heavy_check_mark:                                                               | Operation to be performed on the user                                            | {<br/>"summary": "Sample Operation",<br/>"value": "replace"<br/>}                |
+| `path`                                                                           | *str*                                                                            | :heavy_check_mark:                                                               | Path of the user                                                                 | {<br/>"summary": "Sample Path",<br/>"value": "verified"<br/>}                    |
+| `value`                                                                          | [models.RegisterUserPatchSchemaValue](../models/registeruserpatchschemavalue.md) | :heavy_check_mark:                                                               | N/A                                                                              |                                                                                  |

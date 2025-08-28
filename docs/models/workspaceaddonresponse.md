@@ -1,0 +1,9 @@
+# WorkspaceAddonResponse
+
+
+## Fields
+
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  | Example                                                                                      |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `workspace`                                                                                  | [models.Workspace](../models/workspace.md)                                                   | :heavy_check_mark:                                                                           | Updated workspace information                                                                | {<br/>"value": {<br/>"id": 123,<br/>"name": "My Workspace",<br/>"plan_id": 1,<br/>"billing_cycle": "monthly"<br/>}<br/>} |
+| `message`                                                                                    | *str*                                                                                        | :heavy_check_mark:                                                                           | Success message                                                                              | {<br/>"value": "Storage addon (100GB) added successfully to workspace 123"<br/>}             |

@@ -1,0 +1,10 @@
+# CreateConnectorProfileRequestSchema
+
+
+## Fields
+
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `name`                                                                                       | *str*                                                                                        | :heavy_check_mark:                                                                           | N/A                                                                                          |
+| `description`                                                                                | *OptionalNullable[str]*                                                                      | :heavy_minus_sign:                                                                           | N/A                                                                                          |
+| `connectors`                                                                                 | List[[models.ConnectorProfileConnectorSchema](../models/connectorprofileconnectorschema.md)] | :heavy_minus_sign:                                                                           | N/A                                                                                          |

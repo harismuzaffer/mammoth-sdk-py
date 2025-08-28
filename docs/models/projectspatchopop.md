@@ -1,0 +1,12 @@
+# ProjectsPatchOpOp
+
+Operation
+
+
+## Values
+
+| Name      | Value     |
+| --------- | --------- |
+| `REPLACE` | replace   |
+| `ADD`     | add       |
+| `REMOVE`  | remove    |

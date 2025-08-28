@@ -1,0 +1,9 @@
+# ProjectInviteSchema
+
+
+## Fields
+
+| Field                                                                            | Type                                                                             | Required                                                                         | Description                                                                      | Example                                                                          |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `project_id`                                                                     | *int*                                                                            | :heavy_check_mark:                                                               | Project id                                                                       | {<br/>"summary": "Project id 1",<br/>"value": 1<br/>}                            |
+| `role`                                                                           | [Optional[models.ProjectInviteSchemaRole]](../models/projectinviteschemarole.md) | :heavy_minus_sign:                                                               | Project Role name                                                                | {<br/>"summary": "Project role name",<br/>"value": "project_admin"<br/>}         |

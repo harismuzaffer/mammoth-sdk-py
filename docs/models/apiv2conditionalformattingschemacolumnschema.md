@@ -1,0 +1,9 @@
+# Apiv2ConditionalFormattingSchemaColumnSchema
+
+
+## Fields
+
+| Field                                                                                                        | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `condition`                                                                                                  | [models.ConditionalFormattingSchemaConditionSchema](../models/conditionalformattingschemaconditionschema.md) | :heavy_check_mark:                                                                                           | N/A                                                                                                          |
+| `format_`                                                                                                    | Dict[str, *str*]                                                                                             | :heavy_minus_sign:                                                                                           | N/A                                                                                                          |

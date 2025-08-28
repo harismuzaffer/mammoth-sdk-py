@@ -1,0 +1,10 @@
+# DatasetPatchOperation
+
+
+## Fields
+
+| Field                                                                        | Type                                                                         | Required                                                                     | Description                                                                  | Example                                                                      |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `op`                                                                         | [models.DatasetPatchOperationOp](../models/datasetpatchoperationop.md)       | :heavy_check_mark:                                                           | Operation                                                                    | {<br/>"value": "replace"<br/>}                                               |
+| `path`                                                                       | [models.DatasetPatchOperationPath](../models/datasetpatchoperationpath.md)   | :heavy_check_mark:                                                           | Path                                                                         | {<br/>"value": "name"<br/>}                                                  |
+| `value`                                                                      | [models.DatasetPatchOperationValue](../models/datasetpatchoperationvalue.md) | :heavy_check_mark:                                                           | Value to replace/add/remove the attribute                                    | {<br/>"value": "New name"<br/>}                                              |

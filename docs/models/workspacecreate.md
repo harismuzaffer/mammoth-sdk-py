@@ -1,0 +1,15 @@
+# WorkspaceCreate
+
+Create workspace schema details
+
+
+## Fields
+
+| Field                                                                    | Type                                                                     | Required                                                                 | Description                                                              | Example                                                                  |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| `name`                                                                   | *str*                                                                    | :heavy_check_mark:                                                       | Name of the workspace to be created                                      | {<br/>"summary": "Sample Workspace Name",<br/>"value": "Sample Workspace Name"<br/>} |
+| `user_email`                                                             | *str*                                                                    | :heavy_check_mark:                                                       | Email of the customer                                                    | {<br/>"value": "kia@example.com"<br/>}                                   |
+| `plan_id`                                                                | *OptionalNullable[int]*                                                  | :heavy_minus_sign:                                                       | Plan ID                                                                  | {<br/>"summary": "Sample Plan ID",<br/>"value": "internal"<br/>}         |
+| `payment_frequency`                                                      | *str*                                                                    | :heavy_check_mark:                                                       | Payment frequency of the workspace                                       | {<br/>"summary": "Sample Payment Frequency",<br/>"value": "monthly"<br/>} |
+| `is_verified`                                                            | *Optional[bool]*                                                         | :heavy_minus_sign:                                                       | Is verified                                                              | {<br/>"summary": "Sample Is verified",<br/>"value": true<br/>}           |
+| `is_registration`                                                        | *Optional[bool]*                                                         | :heavy_minus_sign:                                                       | Is registration                                                          | {<br/>"summary": "Sample Is registration",<br/>"value": false<br/>}      |

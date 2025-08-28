@@ -1,0 +1,10 @@
+# SubscriptionPatchItem
+
+
+## Fields
+
+| Field                                                                  | Type                                                                   | Required                                                               | Description                                                            | Example                                                                |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| `op`                                                                   | [models.SubscriptionPatchItemOp](../models/subscriptionpatchitemop.md) | :heavy_check_mark:                                                     | Operation to be performed on the subscription                          | {<br/>"summary": "Add",<br/>"value": "add"<br/>}                       |
+| `path`                                                                 | *Literal["addons"]*                                                    | :heavy_check_mark:                                                     | Path of the subscription                                               | {<br/>"summary": "Subscription",<br/>"value": "addons"<br/>}           |
+| `value`                                                                | [models.SubscriptionPatchValue](../models/subscriptionpatchvalue.md)   | :heavy_check_mark:                                                     | N/A                                                                    |                                                                        |

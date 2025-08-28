@@ -1,0 +1,10 @@
+# WorkspaceUserPatchOp
+
+
+## Fields
+
+| Field                                                                      | Type                                                                       | Required                                                                   | Description                                                                | Example                                                                    |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `op`                                                                       | *Literal["replace"]*                                                       | :heavy_check_mark:                                                         | Operation to be performed                                                  | {<br/>"value": "replace"<br/>}                                             |
+| `path`                                                                     | *Literal["role"]*                                                          | :heavy_check_mark:                                                         | Operation path                                                             | {<br/>"summary": "Change user role on workspace",<br/>"value": "role"<br/>} |
+| `value`                                                                    | [models.WorkspaceUserPatchOpValue](../models/workspaceuserpatchopvalue.md) | :heavy_check_mark:                                                         | New role name                                                              | {<br/>"summary": "Invite ids",<br/>"value": "workspace_member"<br/>}       |

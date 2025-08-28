@@ -1,0 +1,10 @@
+# PipelinePatch
+
+
+## Fields
+
+| Field                                                                          | Type                                                                           | Required                                                                       | Description                                                                    | Example                                                                        |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `op`                                                                           | [models.PipelinePatchOp](../models/pipelinepatchop.md)                         | :heavy_check_mark:                                                             | Operation e.g. replace, command etc                                            | {<br/>"value": "command"<br/>}                                                 |
+| `path`                                                                         | [models.PipelinePatchPath](../models/pipelinepatchpath.md)                     | :heavy_check_mark:                                                             | Path to the resource being modified                                            | {<br/>"description": "Discard draft changes of the pipeline",<br/>"value": "discard"<br/>} |
+| `value`                                                                        | [OptionalNullable[models.PipelinePatchValue]](../models/pipelinepatchvalue.md) | :heavy_minus_sign:                                                             | Patch value, the path of the resource to modified with                         | {<br/>"description": "The patch requires not additional data"<br/>}            |

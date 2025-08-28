@@ -1,0 +1,21 @@
+workflowVersion: 1.0.0
+speakeasyVersion: latest
+sources:
+    Mammoth Analytics:
+        inputs:
+            - location: ../pyopenapi_full.json
+        overlays:
+            - location: .speakeasy/speakeasy-modifications-overlay.yaml
+        output: .speakeasy/out.openapi.yaml
+        registry:
+            location: registry.speakeasyapi.dev/mammoth-analytics/litestar/mammoth-analytics
+targets:
+    mammoth-analytics:
+        target: python
+        source: Mammoth Analytics
+        codeSamples:
+            registry:
+                location: registry.speakeasyapi.dev/mammoth-analytics/litestar/mammoth-analytics-python-code-samples
+            labelOverride:
+                fixedValue: Python (SDK)
+            blocking: false
